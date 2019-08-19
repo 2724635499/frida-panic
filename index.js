@@ -21,7 +21,7 @@ module.exports = {
             };
           });
 
-          Interceptor.attach(Module.findExportByName('libsystem_c.dylib', 'abort'), {
+          Interceptor.attach(Module.getExportByName('libsystem_c.dylib', 'abort'), {
             onEnter(args) {
               const isCausedByUnhandledObjCException = Thread.backtrace(this.context).map(DebugSymbol.fromAddress).some(symbol => {
                 return symbol.moduleName === 'libobjc.A.dylib' && symbol.name === '_objc_terminate()';
