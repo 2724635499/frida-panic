@@ -1,6 +1,6 @@
 {
   "name": "frida-panic",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Easy crash-reporting for Frida-based applications",
   "main": "index.js",
   "files": [
