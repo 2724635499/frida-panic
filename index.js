@@ -1,5 +1,3 @@
-'use strict';
-
 const unsafeOperations = {};
 
 module.exports = {
